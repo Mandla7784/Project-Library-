@@ -45,3 +45,12 @@ Book.prototype = {
     pages: 0,
     read: false,
 };
+
+// Adding new book to the system
+const  openFormButton = document.querySelector("#open-dialog");
+
+openFormButton.addEventListener("click", () => {
+    const dialog = document.querySelector("dialog");
+    dialog.showModal();
+}
+)

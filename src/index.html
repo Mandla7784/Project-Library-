@@ -9,13 +9,26 @@
     <div>
         <h1>Welcome to My Page</h1>
         <div class="books">
-            
-            
+          
         </div>
 
-           <button class="btn-add">Add Book</button>
-
-        </div>
+      <dialog class="dialog-form">
+        <form method="dialog" class="form-book">
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" required />
+          <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required />
+            <label for="pages">Pages:</label>
+            <input type="number" id="pages" name="pages" required />
+            <label for="read">Read:</label>
+            <input type="checkbox" id="read" name="read" />
+            <menu>
+              <button class="btn-submit" type="submit">Submit</button>
+              <button class="btn-cancel" type="reset">Cancel</button>
+            </menu>
+        </form>
+      </dialog>
+          <button id="open-dialog" class="btn-add">Add Book</button>
   
     </div>
     <script src="./js/index.js"></script>
