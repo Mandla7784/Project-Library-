@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  background-color: #f8f9fa;
+  line-height: 1.6;
+  padding: 16px;
+}
+
+body > div {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #8263bb;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Books Container */
+.books {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Book Card */
+.book {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #8263bb;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.book:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+.book h3 {
+  color: #8263bb;
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+.book p {
+  margin-bottom: 0.5rem;
+  color: #666;
+  font-size: 0.95rem;
+}
+.book p:last-child {
+  margin-bottom: 0;
+}
+
+/* Dialog & Form */
+dialog {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 90%;
+}
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-weight: 600;
+  color: #8263bb;
+  margin-bottom: 0.25rem;
+}
+
+input {
+  padding: 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transition: all 0.3s ease;
+}
+input:focus {
+  outline: none;
+  border-color: #8263bb;
+  box-shadow: 0 0 0 3px rgba(130, 99, 187, 0.1);
+}
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #8263bb;
+}
+
+/* Buttons */
+button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+button:active {
+  transform: scale(0.98);
+}
+
+.btn-add {
+  background-color: #8263bb;
+  color: white;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+.btn-add:hover {
+  background-color: #6847a4;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-submit {
+  background-color: #8263bb;
+  color: white;
+}
+.btn-submit:hover {
+  background-color: #6847a4;
+}
+
+.btn-cancel {
+  background-color: #e0e0e0;
+  color: #333;
+}
+.btn-cancel:hover {
+  background-color: #bababa;
+}
+
+menu {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+menu button {
+  flex: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .books {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .btn-add {
+    max-width: 100%;
+  }
+  dialog {
+    width: 95%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

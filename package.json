@@ -4,6 +4,8 @@
   "description": "This is a Javascript Odin project",
   "main": "index.js",
   "scripts": {
+    "watch:scss": "sass --watch src/styles:src/styles",
+    "build:scss": "sass src/styles:src/styles",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +20,6 @@
   },
   "homepage": "https://github.com/Mandla7784/Project-Library-#readme",
   "devDependencies": {
-    "sass": "^1.97.2"
+    "sass": "^1.56.0"
   }
 }
