@@ -2,24 +2,7 @@ const myLibrary = []
 const booksContainer = document.querySelector(".books")
 const form = document.querySelector("form");
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const title = form.title.value;
-    const author = form.author.value;
-    const pages = form.pages.value;
-    const read = form.read.checked;
-    const newBook = addBookToLibrary(title, author, pages, read);
-    
 
-    myLibrary.push(newBook);
-    // Clear previous display
-    booksContainer.innerHTML = "";
-    displayBooks();
-    
-    form.reset();
-    const dialog = document.querySelector("dialog");
-    dialog.close();
-})
 
 
 
@@ -77,3 +60,22 @@ openFormButton.addEventListener("click", () => {
     dialog.showModal();
 }
 )
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const title = form.title.value;
+    const author = form.author.value;
+    const pages = form.pages.value;
+    const read = form.read.checked;
+    const newBook = addBookToLibrary(title, author, pages, read);
+    
+
+    myLibrary.push(newBook);
+    // Clear previous display
+    booksContainer.innerHTML = "";
+    displayBooks();
+    
+    form.reset();
+    const dialog = document.querySelector("dialog");
+    dialog.close();
+})
