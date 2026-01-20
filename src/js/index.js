@@ -1,8 +1,12 @@
 const myLibrary = []
 const booksContainer = document.querySelector(".books")
 
-function Book() {
+function Book( title, author, pages, read) {
 //. Constructor for Book object
+this.title = title;
+this.author = author;
+this.pages = pages;
+this.read = read;
 }
 
 
@@ -28,3 +32,15 @@ function displayBooks(){
        
     })
 }
+
+
+// Example usage:
+addBookToLibrary("The Great Gatsby", "F. Scott Fitzgerald", 180, true);
+addBookToLibrary("To Kill a Mockingbird", "Harper Lee", 281, false);
+displayBooks();Book.prototype = {
+    constructor: Book,
+    title: "",
+    author: "",
+    pages: 0,
+    read: false,
+};
