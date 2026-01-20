@@ -37,7 +37,8 @@ function displayBooks(){
 // Example usage:
 addBookToLibrary("The Great Gatsby", "F. Scott Fitzgerald", 180, true);
 addBookToLibrary("To Kill a Mockingbird", "Harper Lee", 281, false);
-displayBooks();Book.prototype = {
+displayBooks();
+Book.prototype = {
     constructor: Book,
     title: "",
     author: "",
