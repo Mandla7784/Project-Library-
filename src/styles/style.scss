@@ -1,5 +1,5 @@
-$primary-color: #8263bb;
-$secondary-color: #412542;
+$primary-color: #343335;
+$secondary-color: #111011;
 $accent-color: #ff6b6b;
 $text-color: #333;
 $light-bg: #f8f9fa;
@@ -52,7 +52,7 @@ h1 {
   padding: $padding-base;
   border-radius: $border-radius;
   box-shadow: $box-shadow;
-  border-left: 4px solid $primary-color;
+
   transition: $transition;
   cursor: pointer;
 

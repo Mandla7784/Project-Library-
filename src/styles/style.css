@@ -18,7 +18,7 @@ body > div {
 }
 
 h1 {
-  color: #8263bb;
+  color: #343335;
   text-align: center;
   margin-bottom: 2rem;
   font-size: 2.5rem;
@@ -39,7 +39,6 @@ h1 {
   padding: 16px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid #8263bb;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -48,7 +47,7 @@ h1 {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 .book h3 {
-  color: #8263bb;
+  color: #343335;
   margin-bottom: 0.75rem;
   font-size: 1.3rem;
 }
@@ -81,7 +80,7 @@ form {
 
 label {
   font-weight: 600;
-  color: #8263bb;
+  color: #343335;
   margin-bottom: 0.25rem;
 }
 
@@ -95,14 +94,14 @@ input {
 }
 input:focus {
   outline: none;
-  border-color: #8263bb;
-  box-shadow: 0 0 0 3px rgba(130, 99, 187, 0.1);
+  border-color: #343335;
+  box-shadow: 0 0 0 3px rgba(52, 51, 53, 0.1);
 }
 input[type=checkbox] {
   width: 20px;
   height: 20px;
   cursor: pointer;
-  accent-color: #8263bb;
+  accent-color: #343335;
 }
 
 /* Buttons */
@@ -121,7 +120,7 @@ button:active {
 }
 
 .btn-add {
-  background-color: #8263bb;
+  background-color: #343335;
   color: white;
   width: 100%;
   max-width: 300px;
@@ -131,16 +130,16 @@ button:active {
   padding: 1rem;
 }
 .btn-add:hover {
-  background-color: #6847a4;
+  background-color: #1b1a1b;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn-submit {
-  background-color: #8263bb;
+  background-color: #343335;
   color: white;
 }
 .btn-submit:hover {
-  background-color: #6847a4;
+  background-color: #1b1a1b;
 }
 
 .btn-cancel {
