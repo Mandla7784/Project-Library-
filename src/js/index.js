@@ -3,10 +3,6 @@ const booksContainer = document.querySelector(".books")
 const form = document.querySelector("form");
 
 
-
-
-
-
 function Book( title, author, pages, read) {
 //. Constructor for Book object
 this.title = title;
@@ -39,7 +35,6 @@ function displayBooks(){
     })
 }
 
-
 // Example usage:
 addBookToLibrary("The Great Gatsby", "F. Scott Fitzgerald", 180, true);
 addBookToLibrary("To Kill a Mockingbird", "Harper Lee", 281, false);
@@ -68,9 +63,8 @@ form.addEventListener("submit", (e) => {
     const pages = form.pages.value;
     const read = form.read.checked;
     const newBook = addBookToLibrary(title, author, pages, read);
-    
+    console.log(newBook);
 
-    myLibrary.push(newBook);
     // Clear previous display
     booksContainer.innerHTML = "";
     displayBooks();
