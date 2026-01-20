@@ -1,10 +1,15 @@
 import Book from "./book.js";
 
 
-const myLibrary = []
+let myLibrary = []
 const booksContainer = document.querySelector(".books")
 const form = document.querySelector("form");
+
+// Load books from localStorage on startup
 const booksFromLocalStorage = JSON.parse(localStorage.getItem('myLibrary'));
+if(booksFromLocalStorage){
+    myLibrary = booksFromLocalStorage;
+}
 
 
 function addBookToLibrary(title, author, pages, read) {
@@ -15,19 +20,15 @@ function addBookToLibrary(title, author, pages, read) {
   return book;
 }
 function removeBook(id) {
-    // myLibrary.splice(myLibrary.findIndex(book => book.id === id), 1);
-
-    booksFromLocalStorage.forEach((book ,idx) => {
-        if(book.id === id){
-            booksFromLocalStorage.splice(idx, 1);
-            // Clear previous display
-            booksContainer.innerHTML = "";
-            localStorage.setItem('myLibrary', JSON.stringify(booksFromLocalStorage));
-
-            displayBooks();
-        }
-    })
-  
+    // Find and remove the book
+    const idx = myLibrary.findIndex(book => book.id === id);
+    if(idx !== -1){
+        myLibrary.splice(idx, 1);
+        // Clear previous display
+        booksContainer.innerHTML = "";
+        localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+        displayBooks();
+    }
 }
 
 // Make removeBook accessible globally for onclick handlers
@@ -36,7 +37,7 @@ window.removeBook = removeBook;
 
 function displayBooks(){
 
-    booksFromLocalStorage.forEach(book => {
+    myLibrary.forEach(book => {
       
         const bookElement = document.createElement("div");
         const {title, author, pages, read ,id} = book
@@ -90,7 +91,7 @@ form.addEventListener("submit", (e) => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    if(booksFromLocalStorage){
+    if(myLibrary.length > 0){
         displayBooks();
     }
 });
