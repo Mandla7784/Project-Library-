@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Watch SCSS",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "watch:scss"],
+      "isBackground": true,
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": {
+        "pattern": {
+          "regexp": "Error:",
+          "file": 1,
+          "location": 2,
+          "message": 3
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Watching for changes",
+          "endsPattern": "Watching for changes"
+        }
+      }
+    }
+  ]
+}
