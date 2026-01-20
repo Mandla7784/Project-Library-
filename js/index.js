@@ -95,3 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
         displayBooks();
     }
 });
+
+document.querySelector(".btn-cancel").addEventListener("click", () => {
+    const dialog = document.querySelector("dialog");
+    dialog.close;
+});
