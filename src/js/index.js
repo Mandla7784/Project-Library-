@@ -9,6 +9,8 @@ form.addEventListener("submit", (e) => {
     const pages = form.pages.value;
     const read = form.read.checked;
     const newBook = addBookToLibrary(title, author, pages, read);
+    
+
     myLibrary.push(newBook);
     // Clear previous display
     booksContainer.innerHTML = "";
